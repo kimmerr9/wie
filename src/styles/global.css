@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    --color-wie-purple: rgb(181, 159, 241);
+
+    --font-heading-fam: "Cormorant"; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif    
+}
