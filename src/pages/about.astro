@@ -2,152 +2,151 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout bodyClass="has-solid-header">
-<main class="w-full bg-bg-off-white">
+<main class="bg-off-white">
   <!-- Hero / page title spacing to account for fixed header -->
-  <section class="pt-32 pb-14">
-    <div class="mx-auto max-w-7xl px-6">
-      <h1 class="mt-3 text-5xl md:text-6xl font-semibold text-black">
-        Who Are WIE?
-      </h1>
-      <p class="mt-6 max-w-3/4 text-lg md:text-xl text-black/80 leading-relaxed">
-        IEEE Women in Engineering (WIE) is the largest international professional
-        organization dedicated to promoting women engineers and scientists and
-        inspiring girls around the world to follow their academic interests to a
-        career in engineering.
-      </p>
+   	<section class="py-16 md:py-24">
+		<div class="mx-auto max-w-5xl pt-12 md:pt-20 px-6">
+            <div class="inline-flex items-center gap-2 text-wie-700">
+                <span class="h-0.5 w-8 bg-wie-purple"></span>
+                <span class="text-sm font-semibold tracking-widest uppercase">IEEE Women in Engineering</span>
+            </div>
+            <h1 class="mt-4 text-5xl md:text-6xl text-off-black uppercase">
+                who are wie?
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-off-black leading-relaxed max-w-3xl">
+                IEEE Women in Engineering (WIE) is the largest international professional
+                organization dedicated to promoting women engineers and scientists and
+                inspiring girls around the world to follow their academic interests to a
+                career in engineering.
+            </p>
 
-      <div class="mt-2">
-        <a
-          href="https://wie.ieee.org/"
-          target="_blank"
-          rel="noreferrer"
-          class="inline-flex items-center rounded-full bg-white text-black font-semibold py-2"
-        >
-          Learn more about IEEE WIE
-        </a>
-      </div>
-    </div>
-  </section>
+           <div class="mt-6">
+                <a
+                    href="https://wie.ieee.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex items-center gap-2 rounded-full bg-wie-purple px-5 py-2.5 text-white font-semibold shadow-sm
+                        hover:bg-wie-700 focus:outline-none focus:ring-4 focus:ring-wie/25 transition"
+                >
+                    Learn more about IEEE WIE
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
   <!-- Mission -->
-  <section class="pb-14">
-    <div class="mx-auto max-w-7xl px-6">
-      <div class="rounded-2xl border border-white/15 bg-black/25 backdrop-blur-md p-8 md:p-10">
-        <h2 class="text-3xl md:text-4xl font-semibold text-white">Mission</h2>
-        <p class="mt-5 text-lg text-white/80 leading-relaxed">
-          The mission of IEEE WIE is to facilitate the global recruitment and retention
-          of women in technical disciplines. IEEE WIE envisions a vibrant community of
-          IEEE women and men collectively using their diverse talents to innovate for
-          the benefit of humanity.
-        </p>
-      </div>
-    </div>
-  </section>
+    <section class="pb-14">
+        <div class="mx-auto max-w-6xl">
+            <div class="rounded-2xl border-2 border-dashed text-off-black p-8 md:p-10">
+                <h2 class="text-3xl md:text-4xl font-semibold">Mission</h2>
+                <p class="mt-5 text-lg leading-relaxed">
+                    The mission of IEEE WIE is to facilitate the global recruitment and retention
+                    of women in technical disciplines. IEEE WIE envisions a vibrant community of
+                    IEEE women and men collectively using their diverse talents to innovate for
+                    the benefit of humanity.
+                </p>
+            </div>
+        </div>
+    </section>
 
   <!-- Student Branches -->
   <section class="pb-16">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white">
-        Ottawa Section Student Branches
-      </h2>
-      <p class="mt-4 max-w-3xl text-white/75">
-        This website is run and maintained by the IEEE WIE Ottawa Section Student Branches.
-      </p>
-
+    <div class="mx-auto max-w-6xl">
       <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Carleton -->
-        <div class="rounded-2xl border border-white/15 bg-black/25 backdrop-blur-md p-8">
+        <div class="rounded-2xl border-2 border-dashed p-8 text-off-black">
           <div class="flex items-start justify-between gap-4">
-            <h3 class="text-2xl font-semibold text-white">
+            <h3 class="text-2xl font-semibold ">
               IEEE WIE Carleton University Student Branch
             </h3>
             <a
               href="https://www.ieeecarleton.ca/wie"
               target="_blank"
               rel="noreferrer"
-              class="shrink-0 text-white/80 hover:text-white underline underline-offset-4"
+              class="shrink-0 text-off-black underline underline-offset-4"
             >
               Visit
             </a>
           </div>
 
-          <dl class="mt-6 space-y-3 text-white/85">
+          <dl class="mt-6 space-y-3">
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Chair</dt>
+              <dt class="font-semibold">Chair</dt>
               <dd class="text-right">Avery Uyttewaal</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Vice Chair</dt>
+              <dt class="font-semibold">Vice Chair</dt>
               <dd class="text-right">Vidhi Mudgal</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">External</dt>
+              <dt class="font-semibold">External</dt>
               <dd class="text-right">Leah Hynes</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Finance</dt>
+              <dt class="font-semibold">Finance</dt>
               <dd class="text-right">Emily Aldridge</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Internal</dt>
+              <dt class="font-semibold">Internal</dt>
               <dd class="text-right">Lilly Egberts</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Communications</dt>
+              <dt class="font-semibold">Communications</dt>
               <dd class="text-right">Armeena Sajjad</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Design</dt>
+              <dt class="font-semibold">Design</dt>
               <dd class="text-right">Remas Benamer</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Graphics</dt>
+              <dt class="font-semibold">Graphics</dt>
               <dd class="text-right">Samyuktha Radhika</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Social Media</dt>
+              <dt class="font-semibold">Social Media</dt>
               <dd class="text-right">Mansi Prajapati</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Academics</dt>
+              <dt class="font-semibold">Academics</dt>
               <dd class="text-right">Vivian Tran</dd>
             </div>
           </dl>
         </div>
 
         <!-- uOttawa -->
-        <div class="rounded-2xl border border-white/15 bg-black/25 backdrop-blur-md p-8">
-          <h3 class="text-2xl font-semibold text-white">
+        <div class="rounded-2xl border-2 border-dashed p-8">
+          <h3 class="text-2xl font-semibold">
             IEEE WIE University of Ottawa Student Branch
           </h3>
 
-          <dl class="mt-6 space-y-3 text-white/85">
+          <dl class="mt-6 space-y-3">
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Chair</dt>
+              <dt class="font-semibold">Chair</dt>
               <dd class="text-right">Somana Debnath</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Vice Chair</dt>
+              <dt class="font-semibold">Vice Chair</dt>
               <dd class="text-right">Stuti Pandya</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">External</dt>
+              <dt class="font-semibold">External</dt>
               <dd class="text-right">Krisha Veera</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Finance</dt>
+              <dt class="font-semibold">Finance</dt>
               <dd class="text-right">Luke Irvine</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Internal</dt>
+              <dt class="font-semibold">Internal</dt>
               <dd class="text-right">Chloe Dupont</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Communications</dt>
+              <dt class="font-semibold">Communications</dt>
               <dd class="text-right">Aurélie Dumas</dd>
             </div>
             <div class="flex items-baseline justify-between gap-4">
-              <dt class="font-semibold text-white">Design</dt>
+              <dt class="font-semibold">Design</dt>
               <dd class="text-right">Zoe Saunders</dd>
             </div>
           </dl>
@@ -159,48 +158,3 @@ import Layout from "../layouts/Layout.astro";
 
 </Layout>
 
-{
-//   Page 2 - Who Are WIE?
-
-// IEEE Women in Engineering (WIE) is the largest international professional organization dedicated to promoting women engineers and scientists and inspiring girls around the world to follow their academic interests to a career in engineering.
-
-
-// Mission  
-
-// The mission of IEEE WIE is to facilitate the global recruitment and retention of women in technical disciplines. IEEE WIE envisions a vibrant community of IEEE women and men collectively using their diverse talents to innovate for the benefit of humanity
-
-
-// Learn more: https://wie.ieee.org/
-
-
-// IEEE WIE Carleton University Student Branch
-
-
-// Chair - Avery Uyttewaal
-// Vice Chair - Vidhi Mudgal
-// External - Leah Hynes
-// Finance - Emily Aldridge
-// Internal - Lilly Egberts
-// Communications - Armeena Sajjad
-// Design - Remas Benamer
-// Graphics - Samyuktha Radhika
-// Social Media - Mansi Prajapati
-// Academics - Vivian Tran
-
-
-// IEEE WIE University of Ottawa Student Branch
-
-
-// Chair - Somana Debnath
-// Vice Chair - Stuti Pandya
-// External - Krisha Veera
-// Finance - Luke Irvine
-// Internal - Chloe Dupont
-// Communications - Aurélie Dumas
-// Design - Zoe Saunders
-
-
-// This website is run and maintained by the IEEE WIE Ottawa Section Student Branches.
-
-// https://www.ieeecarleton.ca/wie 
-}
