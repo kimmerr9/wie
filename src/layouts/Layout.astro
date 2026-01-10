@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
-
 import Header from '../components/Header.astro';
+
+const { bodyClass = "" } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,22 +18,10 @@ import Header from '../components/Header.astro';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 	</head>
-	<body class="w-screen relative">
+	<body class=`w-screen relative ${bodyClass}`>
 		<Header />
 		<slot />
 		<!-- footer -->
 	</body>
 </html>
 
-
-<!-- 
-<main class="w-full h-full relative">
-	<section class="w-full h-full px-15 flex items-center">
-		<Hero />
-		<div class="absolute right-2 flex flex-col gap-2">
-			<LinkedIn height={30} width={30} />
-			<Facebook height={30} width={30} />
-			<Instagram height={30} width={30} />
-		</div> 
-	</section>
--->
