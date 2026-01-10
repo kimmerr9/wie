@@ -4,6 +4,10 @@
     --color-wie-purple: rgb(181, 159, 241);
 
     --font-heading-fam: "Cormorant"; 
+
+    --color-off-white: #F5F5F5;
+
+    --max-w-4-5xl: 960px;
 }
 
 * {
@@ -17,7 +21,14 @@ body {
 }
 
 .has-solid-header header > div > div {
-  background: #6b4a8d; /* or your brand purple */
+  /* background: #6b4a8d; */
+  background: #915399;
   backdrop-filter: none;
   border-color: rgba(255,255,255,0.2);
+}
+
+h1 {
+    font-family: var(--font-heading-fam);
+    font-weight: bold;
+    text-transform: uppercase;
 }
