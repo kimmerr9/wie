@@ -4,8 +4,8 @@ import HoverDarken from './hoverDarken.astro';
 ---
 <footer class="bg-off-black">
     <div class="mx-auto max-w-7xl px-6 py-14 space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <nav class="flex flex-wrap gap-x-8 gap-y-3 text-sm uppercase tracking-wide">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-sm md:text-base">
+            <nav class="flex flex-wrap gap-x-8 gap-y-3 uppercase tracking-wide">
                 <HoverDarken
                     content="Who Are WIE"
                     href="/about"
@@ -24,15 +24,14 @@ import HoverDarken from './hoverDarken.astro';
             </nav>
             <a
                 href="/tickets"
-                class="inline-block rounded-full bg-wie-purple px-6 py-2 text-sm font-semibold text-off-white/90 hover:bg-wie-purple/90 transition"
             >
-                Purchase Tickets
+                <span class="rounded-full bg-wie-purple px-6 py-2 font-semibold text-off-white/90 hover:bg-wie-purple/90 transition">Purchase Tickets</span>
             </a>
         </div>
 
         <div class="h-px w-full bg-white/10"></div>
 
-        <div class="space-y-3 text-base text-off-white/90">
+        <div class="space-y-3 text-base md:text-lg text-off-white/90">
             <p>
                 <span class="font-semibold">Location:&nbsp;</span>
                 Tabaret Hall – Huguette Labelle (Room 112) ·
@@ -46,7 +45,7 @@ import HoverDarken from './hoverDarken.astro';
 
         <div class="h-px w-full bg-white/10"></div>
 
-        <div class="text-xs text-white/60">
+        <div class="text-xs md:text-sm text-white/60">
             &copy; 2026 IEEE Women in Engineering · All rights reserved
         </div>
     </div>
