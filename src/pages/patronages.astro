@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro"
+import PageHero from "../components/pageHero.astro"
+---
+<Layout bodyClass="has-solid-header">
+<main class="bg-off-white">
+  <!-- Hero / page title spacing to account for fixed header -->
+    <PageHero 
+        sub="Patronage"   
+        title="become a patron today"
+        description="Wine & Cheese is a non-profit event hosted by students. This event would not be possible without the generous support of our valued patrons. For an opportunity to sponsor our event, please reach out to our patronage team."
+    >
+        <a
+            href="mailto:celebratewie@gmail.com"
+            class="font-semibold text-wie-purple hover:underline"
+        >
+            celebratewie@gmail.com
+        </a>
+    </PageHero>
+
+    <section class="mx-auto">
+		<div class="mx-auto max-w-6xl">
+            <div class="mt-6 rounded-3xl border border-off-black/10 bg-off-white shadow-sm overflow-hidden">
+                <div class="px-6 py-4 border-b border-off-black/10 flex items-center justify-between">
+                    <h3 class="text-xl font-bold text-off-off-black">
+                        W&amp;C Patronage Package 2026
+                    </h3>
+                    <a
+                        href="/W&C Patronage Package 2026.pdf"
+                        download="W&C Patronage Package 2026.pdf"
+                        class="text-sm font-semibold text-wie-purple"
+                    >
+                        Download PDF
+                    </a>
+                </div>
+
+                <div class="aspect-[4/5] md:aspect-[16/10]">
+                    <iframe src="/W&C Patronage Package 2026.pdf" class="h-full w-full"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main> 
+
+</Layout>

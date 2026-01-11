@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+
+const { sub, title, description } = Astro.props
+---
+<section class="py-16 md:py-24">
+	<div class="mx-auto max-w-5xl pt-12 md:pt-20">
+        <div class="inline-flex items-center gap-2 text-wie-700">
+            <span class="h-0.5 w-8 bg-wie-purple"></span>
+            <span class="text-sm font-semibold tracking-widest uppercase">{sub}</span>
+        </div>
+        <h1 class="mt-4 text-5xl md:text-6xl text-off-black uppercase">
+            {title}
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-off-black leading-relaxed max-w-4xl">
+            {description}
+        </p>
+        <p class="mt-4 text-lg">
+            <slot />
+        </p>
+    </div>
+</section>
