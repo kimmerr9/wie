@@ -21,7 +21,9 @@ const { bodyClass = "" } = Astro.props;
 	</head>
 	<body class=`w-screen relative ${bodyClass}`>
 		<Header />
-		<slot />
+		<div class="w-screen">
+			<slot />
+		</div>
 		<Footer />
 	</body>
 </html>
