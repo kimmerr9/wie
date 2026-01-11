@@ -7,10 +7,10 @@ import LinkedIn from '../assets/linkedin.svg';
 ---
 
 <Layout>
-	<section class="relative bg-[url('../assets/images/hero-wie-2025.jpg')] bg-cover bg-center bg-no-repeat min-h-[95vh] flex items-center justify-center text-white">
+	<section class="relative bg-[url('../assets/images/hero-wie-2025.jpg')] bg-cover bg-center bg-no-repeat min-h-[95vh] flex items-center justify-center text-off-white">
 		<div class="absolute inset-0 bg-black/40"></div>
 
-		<div class="relative flex flex-col gap-6 text-center text-off-white px-6">
+		<div class="relative flex flex-col gap-6 text-center px-6">
 			<h1 class="text-4xl md:text-6xl uppercase tracking-wide">
 				leading the future together
 			</h1>
@@ -18,41 +18,46 @@ import LinkedIn from '../assets/linkedin.svg';
 				17th annual ieee wie wine and cheese
 			</h1>
 		</div>
-		<div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+		<div class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 flex-col gap-3">
 			<img src={Instagram.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
 			<img src={LinkedIn.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
-			<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">   <path d="..." /> </svg>
+		</div>
+		<div class="flex md:hidden absolute bottom-6 left-1/2 -translate-x-1/2 gap-5">
+			<img src={Instagram.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
+			<img src={LinkedIn.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
 		</div>
 	</section>
 
 	<section class="bg-off-white py-16 md:py-24">
-		<div class="mx-auto max-w-6xl">
-			<div class="float-right w-72 md:w-9/20 ml-4 mb-3 overflow-hidden rounded-3xl ring-1 ring-black/10">
-				<div class="aspect-4/3 md:aspect-16/10">
-					<img
-						src={Wie_Team.src}
-						alt="IEEE WIE team"
-						class="h-full w-full object-cover object-center"
-						loading="lazy"
-					/>
-				</div>
-			</div>
-			<div class="space-y-6 mb-3">
-				<p class="text-xs md:text-sm uppercase tracking-[0.2em] text-zinc-500">
-					leading the future together
-				</p>
-				<h2 class="text-4xl md:text-5xl font-heading-fam font-bold text-off-black tracking-tight">
-					Hello and Welcome!
-				</h2>
-				</div>
-			<div class="text-xl space-y-6">
-				<p class="leading-relaxed">
+		<div class="mx-auto max-w-6xl px-6">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+				<div class="order-1 space-y-6">
+					<p class="text-xs md:text-sm uppercase tracking-[0.2em] text-zinc-500">
+						leading the future together
+					</p>
+					<h2 class="text-4xl md:text-5xl font-heading-fam font-bold text-off-black tracking-tight">
+						Hello and Welcome!
+					</h2>
+					<p class="text-base md:text-xl leading-relaxed text-off-black">
 					Locally, the IEEE WIE student branches at the University of Ottawa and Carleton University seek this brighter future by connecting students with industry leaders, like yourself, through events such as the annual Wine & Cheese. We have put together this event for sixteen years now, to benefit you in seeking the best candidates for internships, coops, and future coworkers.
-				</p>
-				<p class="leading-relaxed">
-					Just like you, we think that the future looks brighter when everyone is working together and contributing to build and innovate. This is why IEEE Women in Engineering (WIE) is the largest international professional organization dedicated to promoting women engineers and scientists. Our mission is to facilitate the global recruitment and retention of women in technical disciplines through affirmative action. IEEE WIE envisions a vibrant community of IEEE women, men and people from all over the gender spectrum collectively using their diverse talents and perspectives to accelerate progress toward a sustainable future with innovative technology.
-				</p>
+					</p>
+				</div>
+				<div class="order-2 mb-6 overflow-hidden rounded-3xl ring-1 ring-off-black/10">
+					<div class="aspect-4/3 md:aspect-16/10">
+						<img
+							src={Wie_Team.src}
+							alt="IEEE WIE team"
+							class="h-full w-full object-cover object-center"
+							loading="lazy"
+						/>
+					</div>
+				</div>
 			</div>
+		</div>
+		<div class="mx-auto max-w-6xl px-6">
+			<p class="text-base md:text-xl leading-relaxed text-off-black">
+				Just like you, we think that the future looks brighter when everyone is working together and contributing to build and innovate. This is why IEEE Women in Engineering (WIE) is the largest international professional organization dedicated to promoting women engineers and scientists. Our mission is to facilitate the global recruitment and retention of women in technical disciplines through affirmative action. IEEE WIE envisions a vibrant community of IEEE women, men and people from all over the gender spectrum collectively using their diverse talents and perspectives to accelerate progress toward a sustainable future with innovative technology.
+			</p>
 		</div>
 	</section>
 </Layout>
