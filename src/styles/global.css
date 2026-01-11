@@ -9,41 +9,41 @@
     --color-off-white: #F5F5F5;
     --color-off-black: #121212;
 }
-
+/* 
 @layer components {
-  .wavy {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+    .wavy {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-  .wavy-char {
-    @apply inline-block text-[4rem] px-[0.08em] leading-none
-      opacity-100
-      will-change-transform
-      transition-[transform,opacity] duration-[420ms]
-      ease-[cubic-bezier(.16,1,.3,1)]
-      transform-gpu;
+    .wavy-char {
+        @apply inline-block text-[4rem] px-[0.08em] leading-none
+            opacity-100
+            will-change-transform
+            transition-[transform,opacity] duration-[420ms]
+            ease-[cubic-bezier(.16,1,.3,1)]
+            transform-gpu;
 
-    transform: translateZ(0) translateY(0) scale(1);
-    white-space: pre; /* preserves spaces without &nbsp; */
-  }
+        transform: translateZ(0) translateY(0) scale(1);
+        white-space: pre;
+    }
 
-  .wavy-char.is-hover {
-    transform: translateZ(0) translateY(-20px) scale(1.03);
-    cursor: pointer;
-  }
+    .wavy-char.is-hover {
+        transform: translateZ(0) translateY(-20px) scale(1.03);
+        cursor: pointer;
+    }
 
-  .wavy-char.near-1 {
-    transform: translateZ(0) translateY(-12px) scale(1.02);
-    opacity: 0.92;
-  }
+    .wavy-char.near-1 {
+        transform: translateZ(0) translateY(-12px) scale(1.02);
+        opacity: 0.92;
+    }
 
-  .wavy-char.near-2 {
-    transform: translateZ(0) translateY(-6px) scale(1.01);
-    opacity: 0.96;
-  }
+    .wavy-char.near-2 {
+        transform: translateZ(0) translateY(-6px) scale(1.01);
+        opacity: 0.96;
+    }
 }
-
+ */
 
 
 * {
