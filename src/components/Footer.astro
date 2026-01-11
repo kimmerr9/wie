@@ -1,32 +1,29 @@
 ---
 import '../styles/global.css';
-import HoverDarken from './animations/hover/Darken.astro';
+import Darken from './animations/hover/Darken.astro';
+import Ripple from './animations/click/Ripple.astro';
 ---
 <footer class="bg-off-black">
     <div class="mx-auto max-w-7xl px-6 py-14 space-y-6">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-sm md:text-base">
             <nav class="flex flex-wrap gap-x-8 gap-y-3 uppercase tracking-wide">
-                <HoverDarken
+                <Darken
                     content="Who Are WIE"
                     href="/about"
                     color="text-off-white/90"
                 />
-                <HoverDarken
+                <Darken
                     content="Patronage Package"
                     href="/patronages"
                     color="text-off-white/90"
                 />
-                <HoverDarken
+                <Darken
                     content="Contact Us"
                     href="/contact"
                     color="text-off-white/90"
                 />
             </nav>
-            <a
-                href="/tickets"
-            >
-                <span class="rounded-full bg-wie-purple px-6 py-2 font-semibold text-off-white/90 hover:bg-wie-purple/90 transition">Purchase Tickets</span>
-            </a>
+            <Ripple content="Purchase Tickets" bg="wie-purple" text="off-white" hover="wie-purple" class="semibold" href="https://www.eventbrite.ca/e/wie-wine-cheese-2026-tickets-1875170919699"/>
         </div>
 
         <div class="h-px w-full bg-white/10"></div>
@@ -34,19 +31,19 @@ import HoverDarken from './animations/hover/Darken.astro';
         <div class="space-y-3 text-base md:text-lg text-off-white/90">
             <p>
                 <span class="font-semibold">Location:&nbsp;</span>
-                Tabaret Hall – Huguette Labelle (Room 112) ·
+                Tabaret Hall &ndash; Huguette Labelle (Room 112) &ndash;
                 550 Cumberland St, Ottawa, ON K1N 6N5
             </p>
             <p>
                 <span class="font-semibold">Date:&nbsp;</span>
-                Thursday, January 29th, 2026 · 7:00 PM – 10:00 PM
+                Thursday, January 29th, 2026 &ndash; 7:00 PM &ndash; 10:00 PM
             </p>
         </div>
 
         <div class="h-px w-full bg-white/10"></div>
 
         <div class="text-xs md:text-sm text-white/60">
-            &copy; 2026 IEEE Women in Engineering · All rights reserved
+            &copy; 2026 IEEE Women in Engineering &ndash; All rights reserved.
         </div>
     </div>
 </footer>
