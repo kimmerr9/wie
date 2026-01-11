@@ -19,15 +19,16 @@ import LinkedIn from '../assets/linkedin.svg';
 			</h1>
 		</div>
 		<div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3">
-			<img src={Instagram.src} width="30" height="30" alt="" class="invert brightness-0 opacity-90 hover:opacity-100 transition"/>
-			<img src={LinkedIn.src} width="30" height="30" alt="" class="invert brightness-0 opacity-90 hover:opacity-100 transition"/>
+			<img src={Instagram.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
+			<img src={LinkedIn.src} width="30" height="30" alt="" class="z-100"/>
+			<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">   <path d="..." /> </svg>
 		</div>
 	</section>
 
 	<section class="bg-off-white py-16 md:py-24">
 		<div class="mx-auto max-w-6xl">
 			<div class="float-right w-72 md:w-9/20 ml-4 mb-3 overflow-hidden rounded-3xl ring-1 ring-black/10">
-				<div class="aspect-[4/3] md:aspect-[16/10]">
+				<div class="aspect-4/3 md:aspect-16/10">
 					<img
 						src={Wie_Team.src}
 						alt="IEEE WIE team"
