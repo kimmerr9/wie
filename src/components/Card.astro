@@ -1,0 +1,16 @@
+---
+const { branch, building, address, postalCode, chair } = Astro.props;
+---
+<div class="rounded-3xl bg-white p-8 ring-1 ring-black/10 space-y-4">
+    <h3 class="text-2xl font-semibold text-off-black">
+        {branch}
+    </h3>
+    <p class="text-lg text-off-black/70 leading-relaxed">
+        {building}<br />
+        {address}<br />
+        Ottawa, ON {postalCode}
+    </p>
+    <p class="font-medium text-lg text-wie-purple">
+        {chair} <span class="text-off-black/60">&ndash; Chair</span>
+    </p>
+</div>

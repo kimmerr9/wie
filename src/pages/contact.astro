@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import LinksSocials from "../components/linksSocials.astro";
+---
+<Layout bodyClass="has-solid-header">
+    <main class="bg-off-white">
+        <section class="mx-auto py-16">
+            <div class="mx-auto max-w-5xl pt-16 md:pt-24">
+                <div class="text-center space-y-6">
+                    <p class="text-sm font-semibold tracking-widest uppercase text-wie-purple">
+                        For Inquiries
+                    </p>
+                    <a
+                        href="mailto:celebratewie@gmail.com"
+                        class="text-2xl md:text-3xl font-semibold text-off-black hover:text-wie-purple transition"
+                        >
+                        celebratewie@gmail.com
+                    </a>
+                </div>
+                <div class="pt-8 md:pt-16 grid md:grid-cols-2 gap-10">
+                    <Card
+                        branch="IEEE WIE Carleton University"
+                        building="IEEE McNaughton Resource Center, ME 3359"
+                        address="1125 Colonel By Dr"
+                        postalCode="K1S 5B6"
+                        chair="Avery Uyttewaal"
+                    />
+                    <Card 
+                        branch="IEEE WIE University of Ottawa"
+                        building="IEEE McNaughton Resource Center"
+                        address="SITE &ndash; Room 4026 "
+                        chair="Somana Debnath"
+                    />
+                </div>
+                <div class="pt-8 md:pt-16 text-center space-y-6">
+                    <div>
+                        <p class="text-sm font-semibold tracking-widest uppercase text-wie-purple">
+                            Follow Us
+                        </p>
+                    </div>
+                    <div class="space-y-3">
+                        <LinksSocials
+                            content="Carleton University WIE Instagram"
+                            href="#"
+                        />
+                        <LinksSocials
+                            content="University of Ottawa WIE Instagram"
+                            href="#"
+                        />
+                    </div>
+                    <div class="pt-6">
+                        <p class="text-sm font-semibold tracking-widest uppercase text-wie-purple">
+                            Find Us on LinkedIn
+                        </p>
+                    </div>
+                    <div class="space-y-3">
+                        <LinksSocials
+                            content="IEEE WIE &ndash; Wine and Cheese"
+                            href="#"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    <main/>
+</Layout>
