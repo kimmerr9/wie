@@ -1,8 +1,53 @@
 ---
 import '../styles/global.css';
+import HoverDarken from './hoverDarken.astro';
 ---
-<footer>
-    <!-- links for all the pages -->
-    <!-- link for the photo album -->
-    
+<footer class="bg-off-black">
+    <div class="mx-auto max-w-7xl px-6 py-14 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <nav class="flex flex-wrap gap-x-8 gap-y-3 text-sm uppercase tracking-wide">
+                <HoverDarken
+                    content="Who Are WIE"
+                    href="/about"
+                    color="text-off-white/90"
+                />
+                <HoverDarken
+                    content="Patronage Package"
+                    href="/patronages"
+                    color="text-off-white/90"
+                />
+                <HoverDarken
+                    content="Contact Us"
+                    href="/contact"
+                    color="text-off-white/90"
+                />
+            </nav>
+            <a
+                href="/tickets"
+                class="inline-block rounded-full bg-wie-purple px-6 py-2 text-sm font-semibold text-off-white/90 hover:bg-wie-purple/90 transition"
+            >
+                Purchase Tickets
+            </a>
+        </div>
+
+        <div class="h-px w-full bg-white/10"></div>
+
+        <div class="space-y-3 text-base text-off-white/90">
+            <p>
+                <span class="font-semibold">Location:&nbsp;</span>
+                Tabaret Hall – Huguette Labelle (Room 112) ·
+                550 Cumberland St, Ottawa, ON K1N 6N5
+            </p>
+            <p>
+                <span class="font-semibold">Date:&nbsp;</span>
+                Thursday, January 29th, 2026 · 7:00 PM – 10:00 PM
+            </p>
+        </div>
+
+        <div class="h-px w-full bg-white/10"></div>
+
+        <div class="text-xs text-white/60">
+            &copy; 2026 IEEE Women in Engineering · All rights reserved
+        </div>
+    </div>
 </footer>
