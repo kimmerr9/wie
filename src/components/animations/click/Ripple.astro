@@ -1,0 +1,38 @@
+---
+const { content, href, class : classBody } = Astro.props;
+const id = `btn-${crypto.randomUUID()}`;
+---
+<a
+    id={id}
+    class=`self-start relative inline-flex items-center overflow-hidden rounded-full border-0 px-4 lg:px-5 py-1 lg:py-2 cursor-pointer bg-off-white text-off-black  transition-colors duration-300 ease-out
+        hover:bg-off-white/75 ${classBody}`
+    href={href}
+>
+    {content}
+</a>
+
+<script define:vars={{ id }}>
+    const button = document.getElementById(id);
+
+    function createRipple(event) {
+        const e = event.currentTarget;
+
+        const circle = document.createElement("span");
+        const diameter = Math.max(e.clientWidth, e.clientHeight);
+        const radius = diameter / 2;
+
+        const rect = e.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${x - radius}px`;
+        circle.style.top = `${y - radius}px`;
+        circle.classList.add("ripple");
+
+        e.querySelector(".ripple")?.remove();
+        e.appendChild(circle);
+    }
+
+    button?.addEventListener("click", createRipple);
+</script>

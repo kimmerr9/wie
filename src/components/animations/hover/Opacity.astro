@@ -1,0 +1,12 @@
+---
+const { img, href, alt } = Astro.props
+---
+<a href="/" class="flex items-center gap-3 shrink-0">
+    <img
+        src={img}
+        alt={alt}
+        class="h-12 w-auto invert brightness-0 transition-all duration-200 ease-in-out
+            hover:opacity-70
+        "
+    />
+</a>

@@ -1,41 +1,37 @@
 ---
 import '../styles/global.css';
 import Logo_BLK from '../assets/wie-logo-black.png';
+import Underline from './animations/hover/Underline.astro';
+import Ripple from './animations/click/Ripple.astro';
+import Opacity from './animations/hover/Opacity.astro';
+import MobileNav from './animations/hover/mobileNav.astro';
 ---
 <header class="fixed top-0 left-0 w-full z-50">
     <div class="mx-auto max-w-7xl px-6">
+        <!-- return to current page mobile nav -->
         <button
             id="nav-backdrop"
             type="button"
-            class="fixed inset-0 hidden md:hidden bg-transparent"
+            class="fixed inset-0 z-40 hidden lg:hidden bg-transparent"
             aria-hidden="true"
             tabindex="-1"
         ></button>
-        <div id="header-shell" class="mt-5 flex flex-wrap md:flex-nowrap items-center justify-between rounded-2xl border border-white/15 bg-black/25 backdrop-blur-md px-6 py-2.5">
-            <a href="/" class="flex items-center gap-3 shrink-0">
-                <img
-                    src={Logo_BLK.src}
-                    alt="IEEE WIE"
-                    class="h-12 w-auto invert brightness-0"
-                />
-            </a>
-            <ul class="hidden md:flex items-center flex-nowrap whitespace-nowrap gap-6 lg:gap-6 text-lg md:text-xl text-white/90">
-                <li><a class="" href="/about">Who Are WIE</a></li>
-                <li><a class="" href="/patronages">Patronage Package</a></li>
-                <li><a class="" href="/contact">Contact Us</a></li>
-                <li>
-                    <a
-                        class="ml-2 inline-flex items-center rounded-full bg-white text-black font-semibold px-5 py-2 hover:bg-white/90 transition"
-                        href="/tickets"
-                    >
-                        Purchase Tickets
-                    </a>
-                </li>
+
+        <div id="header-shell" class="relative z-50 mt-5 flex flex-wrap lg:flex-nowrap items-center justify-between rounded-2xl border border-white/15 bg-off-black/25 backdrop-blur-md px-6 py-2.5">
+            <!-- desktop header -->
+            <Opacity img={Logo_BLK.src} href="/" alt="IEEE WIE Ottawa Section" />
+            <ul class="hidden lg:flex items-center flex-nowrap whitespace-nowrap gap-6 text-lg lg:text-xl text-off-white">
+                <li><Underline content="Who Are WIE" href="/about" duration="200"/></li>
+                <li><Underline content="Patronage Package" href="/patronages" duration="300"/></li>
+                <li></li><Underline content="Contact Us" href="/contact" duration="200"/></li>
+                <li></li><Ripple content="Purchase Tickets" href="/contact" class="font-semibold" /></li>
             </ul>
+
             <!-- mobile hamburger -->
+             
             <button
                 id="nav-toggle"
-                class="md:hidden inline-flex items-center justify-center rounded-xl p-2 text-white/90 hover:text-white hover:bg-white/10 transition"
+                class="lg:hidden inline-flex items-center justify-center rounded-xl p-2 text-off-white hover:text-off-white hover:bg-off-white/10 transition"
                 type="button"
                 aria-label="Open menu"
                 aria-controls="mobile-nav"
@@ -45,33 +41,15 @@ import Logo_BLK from '../assets/wie-logo-black.png';
                     <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </button>
+
             <!-- mobile dropdown -->
-            <div id="nav-dropdown" class="md:hidden hidden w-full py-4">
-                <nav class="flex flex-col gap-3 text-lg text-white/90">
-                    <a 
-                        class="rounded-xl px-3 py-2 hover:bg-white/10 transition" 
-                        href="/about"
-                    >
-                        Who Are WIE
-                    </a>
-                    <a 
-                        class="rounded-xl px-3 py-2 hover:bg-white/10 transition" 
-                        href="/patronages"
-                    >
-                        Patronage Package
-                    </a>
-                    <a 
-                        class="rounded-xl px-3 py-2 hover:bg-white/10 transition" 
-                        href="/contact"
-                    >
-                        Contact Us
-                    </a>
-                    <a
-                        class="mt-2"
-                        href="/tickets"
-                    >
-                        <span class="text-black font-semibold bg-off-white rounded-full px-5 py-2">Purchase Tickets</span>
-                    </a>
+             <!-- remove hover, links not working  -->
+            <div id="nav-dropdown" class="lg:hidden hidden w-full py-4">
+                <nav class="flex flex-col items-start gap-3 text-lg text-off-white">
+                    <MobileNav content="Who Are WIE" href="/about" />
+                    <MobileNav content="Patronage Package" href="/patronages" />
+                    <MobileNav content="Contact Us" href="/contact" />
+                    <Ripple content="Purchase Tickets" href="https://www.wikipedia.com" class="mt-2 font-semibold">
                 </nav>
             </div>
         </div>
@@ -113,13 +91,13 @@ import Logo_BLK from '../assets/wie-logo-black.png';
         // click anywhere outside the header closes it
         backdrop?.addEventListener('click', closeMenu);
 
-        // extra safety: ONLY close when clicking outside the header,
-        backdrop?.addEventListener('click', (e) => {
-            if (!headerShell) return closeMenu();
-            // If somehow the click is inside header, don't close
-            const clickInsideHeader = headerShell.contains(e.target);
-            if (!clickInsideHeader) closeMenu();
-        });
+        // extra safety: ONLY close when clicking outside the header
+        // backdrop?.addEventListener('click', (e) => {
+        //     if (!headerShell) return closeMenu();
+        //     // if somehow the click is inside header -> don't close
+        //     const clickInsideHeader = headerShell.contains(e.target);
+        //     if (!clickInsideHeader) closeMenu();
+        // });
 
         // close menu after clicking a mobile link
         panel?.querySelectorAll('a').forEach((link) => {

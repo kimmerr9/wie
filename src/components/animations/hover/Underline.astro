@@ -1,0 +1,15 @@
+---
+const { content, href, duration } = Astro.props;
+---
+<li>
+    <a 
+        class=`inline-block relative transition-all duration-${duration} ease-in-out
+            hover:opacity-75
+            after:absolute after:-bottom-0.75 after:left-0 after:w-0 after:h-1 after:bg-wie-purple after:rounded-sm after:transition-all after:duration-${duration} after:ease-in-out
+            hover:after:w-full 
+        `
+        href={href}
+    >
+        {content}
+    </a>
+</li>
