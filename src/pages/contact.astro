@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import LinksSocials from "../components/linksSocials.astro";
+import HoverDarken from "../components/hoverDarken.astro";
 ---
 <Layout bodyClass="has-solid-header">
     <main class="bg-off-white">
@@ -40,13 +40,15 @@ import LinksSocials from "../components/linksSocials.astro";
                         </p>
                     </div>
                     <div class="space-y-3">
-                        <LinksSocials
+                        <HoverDarken
                             content="Carleton University WIE Instagram"
                             href="#"
+                            color="text-off-black"
                         />
-                        <LinksSocials
+                        <HoverDarken
                             content="University of Ottawa WIE Instagram"
                             href="#"
+                            color="text-off-black"
                         />
                     </div>
                     <div class="pt-6">
@@ -55,9 +57,10 @@ import LinksSocials from "../components/linksSocials.astro";
                         </p>
                     </div>
                     <div class="space-y-3">
-                        <LinksSocials
+                        <HoverDarken
                             content="IEEE WIE &ndash; Wine and Cheese"
                             href="#"
+                            color="text-off-black"
                         />
                     </div>
                 </div>
