@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import PageHero from "../components/pageHero.astro"
+import Underline from "../components/animations/hover/Underline.astro"
 ---
 <Layout bodyClass="has-solid-header">
 <main class="bg-off-white">
     <PageHero 
-        sub="Patronage"   
+        sub="patronage"   
         title="become a patron today"
         description="Wine & Cheese is a non-profit event hosted by students. This event would not be possible without the generous support of our valued patrons. For an opportunity to sponsor our event, please reach out to our patronage team."
     >
@@ -15,6 +16,7 @@ import PageHero from "../components/pageHero.astro"
         >
             celebratewie@gmail.com
         </a>
+        <Underline content="celebratewie@gmail.com" href="mailto:celebratewie@gmail.com" />
     </PageHero>
 
     <section class="pb-16">

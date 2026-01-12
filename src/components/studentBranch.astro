@@ -1,0 +1,223 @@
+---
+import Underline from "./animations/hover/Underline.astro"
+import Fragment from "./Fragment.astro"
+
+const CARLETON = [
+    {
+        title: "Chair",
+        name: "Avery Uyttewaal",
+    },
+    {
+        title: "Vice Chair",
+        name: "Vidhi Mudgal",
+    },
+    {
+        title: "External",
+        name: "Leah Hynes",
+    },
+    {
+        title: "Finance",
+        name: "Emily Aldridge"
+    },
+    {
+        title: "Internal",
+        name: "Lilly Egberts",
+    },
+    {
+        name: "Armeena Sajjad", 
+        title: "Communications",
+
+    },
+    {
+        title: "Design",
+        name: "Remas Benamer",
+    },
+    {
+        title: "Samyuktha Radhika",
+        name: "Graphics",
+    },
+    {
+        title: "Mansi Prajapati",
+        name: "Social Media",
+    },
+    {
+        title: "Vivian Tran",
+        name: "Academics"
+    },
+]
+
+const UOTTAWA = [
+    {
+        title: "Chair",
+        name: "Somana Debnath",
+    },
+    {
+        title: "Vice Chair",
+        name: "Stuti Pandya",
+    },
+    {
+        title: "External",
+        name: "Krisha Veera",
+    },
+
+    {
+        title: "Finance",
+        name: "Luke Irvine",
+    },
+    {
+        title: "Internal",
+        name: "Chloe Dupont",
+    },
+    {
+        title: "Communications",
+        name: "Aurélie Dumas",
+    },
+    {
+        title: "Design",
+        name: "Zoe Saunders",
+    },
+]
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <Fragment>
+        <div class="flex items-center justify-between gap-4">
+            <h3 class="text-2xl font-semibold ">
+                IEEE WIE Carleton University Student Branch
+            </h3>
+            <div class="text-base md:text-lg"><Underline content="Visit" href="https://www.ieeecarleton.ca/wie" /></div>
+        </div>
+        <dl class="mt-6 space-y-4">
+            {CARLETON.map((student) => (
+                <div class="flex items-baseline justify-between gap-4 text-base md:text-lg">
+                    <dt class="font-semibold">{student.title}</dt>
+                    <dd class="text-right">{student.name}</dd>
+                </div>
+            ))}
+        </dl>
+    </Fragment>
+    <Fragment>
+        <div class="flex items-center justify-between gap-4">
+            <h3 class="text-2xl font-semibold ">
+                IEEE WIE University of Ottawa Student Branch
+            </h3>
+            <div class="text-base md:text-lg"><Underline content="Visit" href="https://ieeeuottawa.ca/about/" /></div>
+        </div>
+        <dl class="mt-6 space-y-4">
+            {UOTTAWA.map((student) => (
+                <div class="flex items-baseline justify-between gap-4 text-base md:text-lg">
+                    <dt class="font-semibold">{student.title}</dt>
+                    <dd class="text-right">{student.name}</dd>
+                </div>
+            ))}
+        </dl>
+    </Fragment>
+</div>
+
+{ /*}
+    
+  <!-- Student Branches -->
+  <section class="pb-16">
+    <div class="mx-auto max-w-6xl">
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Carleton -->
+        <div class="rounded-2xl border-2 border-dashed p-8 text-off-black">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-semibold ">
+              IEEE WIE Carleton University Student Branch
+            </h3>
+            <a
+              href="https://www.ieeecarleton.ca/wie"
+              target="_blank"
+              rel="noreferrer"
+              class="shrink-0 text-off-black underline underline-offset-4"
+            >
+              Visit
+            </a>
+          </div>
+
+          <dl class="mt-6 space-y-3">
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Chair</dt>
+              <dd class="text-right">Avery Uyttewaal</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Vice Chair</dt>
+              <dd class="text-right">Vidhi Mudgal</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">External</dt>
+              <dd class="text-right">Leah Hynes</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Finance</dt>
+              <dd class="text-right">Emily Aldridge</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Internal</dt>
+              <dd class="text-right">Lilly Egberts</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Communications</dt>
+              <dd class="text-right">Armeena Sajjad</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Design</dt>
+              <dd class="text-right">Remas Benamer</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Graphics</dt>
+              <dd class="text-right">Samyuktha Radhika</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Social Media</dt>
+              <dd class="text-right">Mansi Prajapati</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Academics</dt>
+              <dd class="text-right">Vivian Tran</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- uOttawa -->
+        <div class="rounded-2xl border-2 border-dashed p-8">
+          <h3 class="text-2xl font-semibold">
+            IEEE WIE University of Ottawa Student Branch
+          </h3>
+
+          <dl class="mt-6 space-y-3">
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Chair</dt>
+              <dd class="text-right">Somana Debnath</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Vice Chair</dt>
+              <dd class="text-right">Stuti Pandya</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">External</dt>
+              <dd class="text-right">Krisha Veera</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Finance</dt>
+              <dd class="text-right">Luke Irvine</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Internal</dt>
+              <dd class="text-right">Chloe Dupont</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Communications</dt>
+              <dd class="text-right">Aurélie Dumas</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-semibold">Design</dt>
+              <dd class="text-right">Zoe Saunders</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section> */
+}

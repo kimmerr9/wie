@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import AddressCard from "../components/addressCard.astro";
 import Darken from "../components/animations//hover/Darken.astro";
 ---
 <Layout bodyClass="has-solid-header">
@@ -19,14 +19,14 @@ import Darken from "../components/animations//hover/Darken.astro";
                     </a>
                 </div>
                 <div class="pt-8 md:pt-16 grid md:grid-cols-2 gap-10">
-                    <Card
+                    <AddressCard
                         branch="IEEE WIE Carleton University"
                         building="IEEE McNaughton Resource Center, ME 3359"
                         address="1125 Colonel By Dr"
                         postalCode="K1S 5B6"
                         chair="Avery Uyttewaal"
                     />
-                    <Card 
+                    <AddressCard 
                         branch="IEEE WIE University of Ottawa"
                         building="IEEE McNaughton Resource Center"
                         address="SITE &ndash; Room 4026 "
