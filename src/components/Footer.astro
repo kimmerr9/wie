@@ -5,9 +5,9 @@ import Ripple from './animations/click/Ripple.astro';
 ---
 <footer class="bg-off-black">
     <div class="mx-auto max-w-7xl px-6 py-14 space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-sm md:text-base">
+        <div class="flex flex-col md:flex-row items-center md:justify-between gap-6 text-xs md:text-base">
             <nav class="flex flex-wrap gap-x-8 gap-y-3 uppercase tracking-wide">
-                <Darken
+                <Darken 
                     content="Who Are WIE"
                     href="/about"
                     color="text-off-white/90"
@@ -23,7 +23,9 @@ import Ripple from './animations/click/Ripple.astro';
                     color="text-off-white/90"
                 />
             </nav>
-            <Ripple content="Purchase Tickets" bg="wie-purple" text="off-white" class="semibold" href="https://www.eventbrite.ca/e/wie-wine-cheese-2026-tickets-1875170919699"/>
+            <div>
+                <Ripple content="Purchase Tickets" bg="wie-purple" text="off-white" class="semibold text-base " href="https://www.eventbrite.ca/e/wie-wine-cheese-2026-tickets-1875170919699"/>
+            </div>
         </div>
 
         <div class="h-px w-full bg-white/10"></div>
@@ -36,13 +38,13 @@ import Ripple from './animations/click/Ripple.astro';
             </p>
             <p>
                 <span class="font-semibold">Date:&nbsp;</span>
-                Thursday, January 29th, 2026 &ndash; 7:00 PM &ndash; 10:00 PM
+                Thursday, January 29th, 2026 &ndash; 7:00 PM &ndassh; 10:00 PM
             </p>
         </div>
 
         <div class="h-px w-full bg-white/10"></div>
-
-        <div class="flex justify-between">
+        <!-- flex justify-between gap-3 -->
+        <div class="flex flex-col items-center md:flex-row md:justify-between gap-2 md:gap-0">
             <div class="text-xs md:text-sm text-off-white/65">
                 &copy; 2026 IEEE Women in Engineering &ndash; All rights reserved.
             </div>
