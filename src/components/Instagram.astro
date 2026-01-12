@@ -1,0 +1,28 @@
+---
+import Ig from '../assets/instagram.svg';
+const { href, handle, alt, } = Astro.props;
+---
+
+<a
+  href={href}
+  class={"group relative inline-flex items-center"}
+>
+  <span
+    class="relative z-10 grid place-items-center backdrop-blur-md transition-all duration-300 
+        hover:opacity-75"
+    aria-hidden="true"
+  >
+    <img src={Ig.src} width="30" height="30" alt={alt} class="z-100 filter invert brightness-0"/>
+  </span>
+
+  <span
+    class="
+      pointer-events-none absolute right-full top-1/2 -translate-y-1/2 mr-2 inline-flex items-center justify-center h-9 rounded-full border border-white/15 bg-black/25 backdrop-blur-md text-sm font-medium text-white/90 whitespace-nowrap overflow-hidden w-0 opacity-0 transition-[width,opacity] duration-300 ease-out
+
+      group-hover:w-32 group-hover:opacity-100
+      group-focus-visible:w-32 group-focus-visible:opacity-100
+    "
+  >
+    <span class="px-3">{handle}</span>
+  </span>
+</a>

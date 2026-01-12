@@ -2,8 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Wie_Team from '../assets/images/wie-team.jpg'
 
-import Instagram from '../assets/instagram.svg';
-import LinkedIn from '../assets/linkedin.svg';
+import Instagram from '../components/Instagram.astro';
+import Linkedin from '../components/Linkedin.astro';
+
+import SvgInsta from '../assets/instagram.svg';
+import SvgLinked from '../assets/linkedin.svg';
 ---
 
 <Layout>
@@ -19,13 +22,20 @@ import LinkedIn from '../assets/linkedin.svg';
 			</h1>
 		</div>
 		<div class="hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 flex-col gap-3">
-			<img src={Instagram.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
-			<img src={LinkedIn.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
+			<Instagram handle="@carletonwie" href="https://www.instagram.com/carletonwie/" />
+			<Instagram handle="@wie.ieee.uottawa" href="https://www.instagram.com/wie.ieee.uottawa/" />
+			<Linkedin handle="@ieee-wineandcheese" href="https://www.linkedin.com/company/ieee-wineandcheese/" />
 		</div>
 		<div class="flex lg:hidden absolute bottom-6 left-1/2 -translate-x-1/2 gap-5">
-			<img src={Instagram.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
-			<img src={LinkedIn.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
-		</div>
+			<a href="https://www.instagram.com/carletonwie/">
+				<img src={SvgInsta.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
+			</a>
+			<a href="https://www.instagram.com/wie.ieee.uottawa/">
+				<img src={SvgInsta.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
+			</a>
+			<a href="https://www.linkedin.com/company/ieee-wineandcheese/">
+				<img src={SvgLinked.src} width="30" height="30" alt="" class="z-100 filter invert brightness-0"/>
+			</a>
 	</section>
 
 	<section class="bg-off-white py-16 md:py-24">
